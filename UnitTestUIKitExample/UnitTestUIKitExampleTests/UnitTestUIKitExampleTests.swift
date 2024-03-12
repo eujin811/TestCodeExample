@@ -24,6 +24,12 @@ final class UnitTestUIKitExampleTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        
+        let viewcon = ViewController()
+        let equtableWord = "테스트 중"
+        
+        
+        XCTAssertEqual(viewcon.testTextField.placeholder, equtableWord, "placeHolder 문구는 \(equtableWord)가 아닙니다.")
     }
 
     func testPerformanceExample() throws {
