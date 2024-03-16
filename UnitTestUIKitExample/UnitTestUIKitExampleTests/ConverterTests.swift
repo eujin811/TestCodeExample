@@ -1,16 +1,19 @@
 //
 //  ConverterTests.swift
-//  UnitTestUIKitExample
+//  UnitTestUIKitExampleTests
 //
 //  Created by YoujinMac on 3/17/24.
 //
 
 import XCTest
+@testable import UnitTestUIKitExample
 
 final class ConverterTests: XCTestCase {
+    private var sut: Converter?
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.sut = Converter()
     }
 
     override func tearDownWithError() throws {
