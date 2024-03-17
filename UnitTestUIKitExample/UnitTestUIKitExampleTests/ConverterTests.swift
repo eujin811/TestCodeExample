@@ -44,6 +44,30 @@ final class ConverterTests: XCTestCase {
         let result = sut?.arabicNumToRomanNum(num)
         XCTAssertEqual(result, "VI", "\(num)의 컨버팅 실패")
     }
+    
+    func testRomanNumConvertForTenExample() {
+        let num = 10
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "X", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForTwentyExample() {
+        let num = 20
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "XX", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForFourExample() {
+        let num = 4
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "IV", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForFourNine() {
+        let num = 9
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "IX", "\(num)의 컨버팅 실패")
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
