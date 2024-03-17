@@ -21,10 +21,16 @@ final class ConverterTests: XCTestCase {
         self.sut = nil
     }
 
-    func testRomanNumConvertExample() {
+    func testRomanNumConvertForOneExample() {
         let num = 1
         let result = sut?.arabicNumToRomanNum(num)
         XCTAssertEqual(result, "I", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForTwoExample() {
+        let num = 2
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "II", "\(num)의 컨버팅 실패")
     }
 
     func testPerformanceExample() throws {
