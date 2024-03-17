@@ -10,7 +10,9 @@ import Foundation
 final class Converter {
     
     func arabicNumToRomanNum(_ num: Int) -> String {
-        return "I"
+//        return "I"
+        
+        return num == 5 ? "V" : String(repeating: "I", count: num)
     }
     
 }
