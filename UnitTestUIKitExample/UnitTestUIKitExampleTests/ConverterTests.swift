@@ -38,6 +38,12 @@ final class ConverterTests: XCTestCase {
         let result = sut?.arabicNumToRomanNum(num)
         XCTAssertEqual(result, "V", "\(num)의 컨버팅 실패")
     }
+    
+    func testRomanNumConvertForSixExample() {
+        let num = 6
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "VI", "\(num)의 컨버팅 실패")
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

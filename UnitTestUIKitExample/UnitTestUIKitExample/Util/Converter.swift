@@ -11,8 +11,17 @@ final class Converter {
     
     func arabicNumToRomanNum(_ num: Int) -> String {
 //        return "I"
+                
+        var result = String()
         
-        return num == 5 ? "V" : String(repeating: "I", count: num)
+        var localNumber = num
+        if localNumber >= 5 {
+            result += "V"
+            localNumber = localNumber - 5
+        }
+        
+        result += String(repeating: "I", count: localNumber)
+        return result
     }
     
 }
