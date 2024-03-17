@@ -9,4 +9,8 @@ import Foundation
 
 final class Converter {
     
+    func arabicNumToRomanNum(_ num: Int) -> String {
+        return ""
+    }
+    
 }
