@@ -5,6 +5,8 @@
 //  Created by YoujinMac on 3/17/24.
 //
 
+        /*** TDD Test ***/
+
 import XCTest
 @testable import UnitTestUIKitExample
 
@@ -33,6 +35,12 @@ final class ConverterTests: XCTestCase {
         XCTAssertEqual(result, "II", "\(num)의 컨버팅 실패")
     }
     
+     func testRomanNumConvertForFourExample() {
+         let num = 4
+         let result = sut?.arabicNumToRomanNum(num)
+         XCTAssertEqual(result, "IV", "\(num)의 컨버팅 실패")
+     }
+     
     func testRomanNumConvertForFiveExample() {
         let num = 5
         let result = sut?.arabicNumToRomanNum(num)
@@ -43,6 +51,12 @@ final class ConverterTests: XCTestCase {
         let num = 6
         let result = sut?.arabicNumToRomanNum(num)
         XCTAssertEqual(result, "VI", "\(num)의 컨버팅 실패")
+    }
+   
+    func testRomanNumConvertForNineExample() {
+        let num = 9
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "IX", "\(num)의 컨버팅 실패")
     }
     
     func testRomanNumConvertForTenExample() {
@@ -57,16 +71,46 @@ final class ConverterTests: XCTestCase {
         XCTAssertEqual(result, "XX", "\(num)의 컨버팅 실패")
     }
     
-    func testRomanNumConvertForFourExample() {
-        let num = 4
+    func testRomanNumConvertFor27() {
+        let num = 27
         let result = sut?.arabicNumToRomanNum(num)
-        XCTAssertEqual(result, "IV", "\(num)의 컨버팅 실패")
+        XCTAssertEqual(result, "XXVII", "\(num)의 컨버팅 실패")
     }
     
-    func testRomanNumConvertForFourNine() {
-        let num = 9
+    func testRomanNumConvertForFourty() {
+        let num = 40
         let result = sut?.arabicNumToRomanNum(num)
-        XCTAssertEqual(result, "IX", "\(num)의 컨버팅 실패")
+        XCTAssertEqual(result, "XL", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForFifty() {
+        let num = 50
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "L", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForNinety() {
+        let num = 90
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "XC", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForHundred() {
+        let num = 100
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "C", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForFiveHundred() {
+        let num = 500
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "D", "\(num)의 컨버팅 실패")
+    }
+    
+    func testRomanNumConvertForThousand() {
+        let num = 1000
+        let result = sut?.arabicNumToRomanNum(num)
+        XCTAssertEqual(result, "M", "\(num)의 컨버팅 실패")
     }
 
     func testPerformanceExample() throws {
