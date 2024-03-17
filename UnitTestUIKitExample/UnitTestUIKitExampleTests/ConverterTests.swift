@@ -21,7 +21,7 @@ final class ConverterTests: XCTestCase {
         self.sut = nil
     }
 
-    func RomanNumConvertExample() {
+    func testRomanNumConvertExample() {
         let num = 1
         let result = sut?.arabicNumToRomanNum(num)
         XCTAssertEqual(result, "I", "\(num)의 컨버팅 실패")
