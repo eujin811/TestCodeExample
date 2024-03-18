@@ -128,9 +128,38 @@
 		DispatchQueue.main.async {
 			ocean.add("dolphins")
 			ocean.add("whales")
+			// ocean.add("apple")
 		}
 
 		expect(ocean).toEventually(contain("dolphins", "whales"))
 	```
 
+	- timeout 테스트
+	```swift
+	 var ocean = [String]()
+        
+	 DispatchQueue.main.async {
+            ocean.append("dolphins")
+            ocean.append("whales")
+         }
+        
+        
+         expect(ocean).toEventually(contain("starfish"), timeout: .seconds(3))
+	```
+	
+	- 타입 테스트
+	```swift
+       		expect(self.sut).to(beAKindOf(Converter.self))
+	```
 
+	- true, false 테스트
+	```swift
+	        let pass = true
+        	let fail = false
+        
+        	expect(pass).to(beTruthy())
+        	expect(pass).to(beFalse())
+        
+        	expect(fail).to(beTruthy())
+        	expect(fail).to(beFalse())
+	```
