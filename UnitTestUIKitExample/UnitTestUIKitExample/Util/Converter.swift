@@ -48,5 +48,8 @@ final class Converter {
         
         return result
     }
-    
+       
+    func convertToString(_ num: Int) -> String {
+        return "\(num)"
+    }
 }

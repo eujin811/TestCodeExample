@@ -22,9 +22,9 @@ class ConverterViewController: UIViewController{
         super.viewDidLoad()
         self.setUI()
         
-        let testNum = [1...1000].randomElement()!
-        self.arabicNumLbl.text = "\(testNum)"
-        self.romanNumLbl.text = Converter().arabicNumToRomanNum(testNum)
+//        let testNum = [1...1000].randomElement()!
+//        self.arabicNumLbl.text = "\(testNum)"
+//        self.romanNumLbl.text = Converter().arabicNumToRomanNum(testNum)
     }
     
     private func setUI() {
