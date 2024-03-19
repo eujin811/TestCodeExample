@@ -105,3 +105,61 @@
 	- Refactor: 코드를 정리하고 최적화
 
 	
+## Nimble
+- 테스트코드 실패 메시지 제공 프레임워크
+- 가독성 좋은 실패 메시지 제공 + 별도의 함수 존재
+	- 기본형
+	```swift
+		func testExample() throws {
+			let result = twd?.startPring(number: 1)
+			expect(result).to(contain("1"))
+		}
+	```
+
+	- description 
+	```swift
+		func testExample() throws {
+			expect(1+1).to(equal(3), description: "failed - 덧셈 기능 테스트")
+		}
+	```
+
+	- async 테스트
+	```swift
+		DispatchQueue.main.async {
+			ocean.add("dolphins")
+			ocean.add("whales")
+			// ocean.add("apple")
+		}
+
+		expect(ocean).toEventually(contain("dolphins", "whales"))
+	```
+
+	- timeout 테스트
+	```swift
+	 var ocean = [String]()
+        
+	 DispatchQueue.main.async {
+            ocean.append("dolphins")
+            ocean.append("whales")
+         }
+        
+        
+         expect(ocean).toEventually(contain("starfish"), timeout: .seconds(3))
+	```
+	
+	- 타입 테스트
+	```swift
+       		expect(self.sut).to(beAKindOf(Converter.self))
+	```
+
+	- true, false 테스트
+	```swift
+	        let pass = true
+        	let fail = false
+        
+        	expect(pass).to(beTruthy())
+        	expect(pass).to(beFalse())
+        
+        	expect(fail).to(beTruthy())
+        	expect(fail).to(beFalse())
+	```
